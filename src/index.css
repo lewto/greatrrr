@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply h-full;
+  }
+  
+  body {
+    @apply min-h-full bg-[#0A0A0F] text-gray-100 font-inter antialiased;
+  }
+}
+
+@keyframes speed-line {
+  0% {
+    transform: translateX(-100%) rotate(-45deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%) rotate(-45deg);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes gg-racing {
+  0% { transform: translateX(0); opacity: 1; }
+  25% { transform: translateX(100px); opacity: 0; }
+  26% { transform: translateX(-100px); opacity: 0; }
+  50% { transform: translateX(0); opacity: 1; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes trail {
+  0% { transform: scaleX(0); opacity: 1; }
+  100% { transform: scaleX(1); opacity: 0; }
+}
